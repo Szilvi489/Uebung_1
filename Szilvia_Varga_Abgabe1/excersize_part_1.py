@@ -1,3 +1,4 @@
+import time
 #Excersize 1: Famous Quote
 import sys
 
@@ -170,4 +171,29 @@ def sequence(number):
     else:
      print("Not between 0 and 9")
 
-sequence(9)
+#sequence(3)
+
+#Excersize 8: String check
+def string_check(text=""):#I provide a default value : an empty string--> the argument becomes optional
+    #like this I an check and react myself, if the user doesnt provide anything
+       if len(text) > 0:#is my text empty?if not, check whats inside
+            if (str(text).lower().startswith("a") or str(text).lower().endswith("a")):
+                print("True")
+            else:
+                print("False")
+       else:#my text is empty --> write my own message
+           print("You have to enter something!")
+
+string_check("Alma")
+
+def triangle(rows):
+    i=0
+    while i<= int(rows):
+
+        print("* " * i)
+        i+=1
+
+#triangle(4)
+
+
+
