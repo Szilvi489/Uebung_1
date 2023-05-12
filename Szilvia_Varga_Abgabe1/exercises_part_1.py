@@ -96,7 +96,6 @@ def name_age():
              printMethod(m5)
  else:
      print("Invalid input!")
-
 #name_age()
 
 #Excersize 4: Swap
@@ -124,6 +123,8 @@ def swap_integers():
     n2=n3
     print("After swap "+ "\n" + "x = " + str(n1) + "\n" + "y = " + str(n3))
 
+#multiple assigment swap would have been this: n1,n2=n2,n1
+
 
 #swap_integers()
 
@@ -132,7 +133,7 @@ def swap_integers():
 def check_numbers(number1, number2):
     #number one OR number2 can be divided by 6 without a leftover
     #           AND
-    #number1 AND number2 both divisible without a leftover
+    #number1 AND number2 both divisible by 10 without a leftover
     if((number1 % 6 == 0 or number2 % 6 == 0) and number1 % 10 == 0 and number2% 10 == 0):
         print("true")
     else:
@@ -156,7 +157,7 @@ def sum_up(num1, num2):
 
  print(" = " + str(sum))
 
-#sum_up(3,9)
+sum_up(0,33)
 
 #Excersize 7: Sequencer
 
@@ -184,7 +185,7 @@ def string_check(text=""):#I provide a default value : an empty string--> the ar
        else:#my text is empty --> write my own message
            print("You have to enter something!")
 
-string_check("Alma")
+#string_check("alma")
 
 def triangle(rows):
     i=0

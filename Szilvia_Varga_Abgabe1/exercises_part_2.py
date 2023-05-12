@@ -181,7 +181,7 @@ def remove_duplicates_my_way(items):
 
 
 #Exercise 5: Computer description
-
+#Add default values, in case the key isnt there at all
 def describe_computer(computer):#accepts a dictionary
     #to print:You have a TYPE from BRAND that costs PRICE€.
  brand=computer.get('Brand','Unknown Brand')
@@ -189,11 +189,44 @@ def describe_computer(computer):#accepts a dictionary
  #output = ("You have a " , computer["Type"] , " from brand: ", computer["Brand"], ", that costs: " , computer["Price"],"$ ", ",OS: ",computer["OS":"Linux"], sep="")
  output = f"You have a {computer['Type']} from brand: {brand}, that costs: {computer['Price']}$, OS: {os}"
  print(output)
+
 my_notebook1 = {'Type': 'Notebook','Brand' : 'MAC' , 'Price': 2000 , 'OS' : 'MacOS Ventura' }
-my_notebook2 = {'Type': 'Notebook','Brand' : 'Huawei' , 'Price': 2000}
+my_notebook2 = {'Type': 'Notebook','Brand' : 'Huawei' , 'Price': 2000 }
 my_notebook3 = {'Type': 'Notebook', 'Price': 2000}
-describe_computer(my_notebook1)
-describe_computer(my_notebook2)
-describe_computer(my_notebook3)
+
+#describe_computer(my_notebook1)
+#describe_computer(my_notebook2)
+#describe_computer(my_notebook3)
+
+#todo COMMIT!!
+#Describe Computer 2: An other way to add default values (if the key doesnt exist at all) would be to simply use an if statement and save the new dictionary in the place of the old one...
+#Add default values, in case the key isnt there at all
+def describe_computer2(computer):
+ if "Type" not in computer or "OS" not in computer:
+     computer = {'Type':'Unknown type' , 'Brand' : 'DELL' , 'Price': 2000 , 'OS' : 'Linux' }
+     print(computer)
 
 
+
+my_notebook1 = {'Brand' : 'MAC' , 'Price': 2000 , 'OS' : 'MacOS Ventura' }
+my_notebook2 = {'Type': 'Notebook','Brand' : 'Huawei' , 'Price': 2000}
+my_notebook3 = {'Price': 2000}
+
+#describe_computer2(my_notebook1)
+#describe_computer2(my_notebook2)
+#describe_computer2(my_notebook3)
+
+#todo Add default vlaues, if the key there, but there is no value
+def describe_computer3(computer):
+ if (computer["Type":"T"] or computer["Type":"Y"]):
+     print("No type")
+
+
+
+
+
+my_notebook1 = {'Type': '','Brand' : 'MAC' , 'Price': 2000 , 'OS' : 'MacOS Ventura' }
+my_notebook2 = {'Type': 'Notebook','Brand' : 'MAC' , 'Price': 2000 , 'OS' : 'MacOS Ventura' }
+my_notebook3 = {'Type': 'Notebook','Brand' : 'MAC' , 'Price': 2000 , 'OS' : 'MacOS Ventura' }
+
+describe_computer3(my_notebook1)
